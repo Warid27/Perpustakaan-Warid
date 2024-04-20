@@ -1,0 +1,100 @@
+*, html, body{
+    padding: 0;
+    margin: 0;
+}
+
+/* FONT */
+/* Nunito Sans: "Nunito Sans" */
+/* Alfa Slab One: "Alfa Slab One" */
+/* FONT */
+
+
+:root{
+    --outline-text:
+    -1px -1px 5px var(--picton-blue),  
+    1px -1px 5px var(--picton-blue),
+    1px 1px 5px var(--picton-blue),
+    1px 1px 5px var(--picton-blue);
+    --text-3D: 1px 1px 2px rgba(0, 0, 0, 0.4), 
+    2px 2px 2px rgba(0, 0, 0, 0.4), 
+    3px 3px 2px rgba(0, 0, 0, 0.4); /* Efek 3D shadow */;
+    --bittersweet: rgb(238, 99, 82, 1);
+    --emerald: #59cd90ff;
+    --picton-blue: #3fa7d6ff;
+    --xanthous: #fac05eff;
+    --atomic-tangerine: #f79d84ff;
+}
+
+body{
+    background: url("../img/perpus-skanida.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.gradient{
+    z-index: -1;
+    height: 100vh;
+    width: 50%;
+    background-image: linear-gradient(90deg, var(--xanthous), var(--bittersweet), rgb(238, 99, 82, .2));
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    padding: 0 5em 0 5em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    font-family: "Nunito Sans";
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 30vw;
+}
+h1{
+    font-family: "Alfa Slab One";
+    letter-spacing: 3px;
+    text-shadow: var(--outline-text);
+    font-weight: normal;
+    font-size: clamp(12px, 2.4vw, 48px);
+}
+h3{
+    font-size: clamp(6px, 1.2vw, 24px);
+}
+q{
+    font-size: clamp(4px, .8vw, 16px);
+    text-align: justify;
+}
+.daftar_links{
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+}
+
+.daftar_links a{
+    display: flex;
+    color: black;
+    background-color: var(--picton-blue);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 1.5vh;
+    border-radius: 50px;
+    width: 10vw;
+    font-size: clamp(5px, 1vw, 20px);
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all .3s ease;
+    box-shadow: var(--text-3D);
+}
+.daftar_links a:hover{
+    color: white;
+    transform: scale(.9);
+}
+.daftar_links a:active{
+    background-color: var(--emerald);
+    transform: scale(1.1);
+}

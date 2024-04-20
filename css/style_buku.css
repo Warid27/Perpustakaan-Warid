@@ -1,0 +1,335 @@
+*, html, body{
+    padding: 0;
+    margin: 0;
+}
+
+/* FONT */
+/* Nunito Sans: "Nunito Sans" */
+/* Alfa Slab One: "Alfa Slab One" */
+/* FONT */
+
+
+/* VARIABEL */
+:root{
+    --outline-text:
+    -1px -1px 5px var(--picton-blue),  
+    1px -1px 5px var(--picton-blue),
+    1px 1px 5px var(--picton-blue),
+    1px 1px 5px var(--picton-blue);
+    --text-3D: 1px 1px 2px rgba(0, 0, 0, 0.4), 
+    2px 2px 2px rgba(0, 0, 0, 0.4), 
+    3px 3px 2px rgba(0, 0, 0, 0.4);
+    --bittersweet: rgb(238, 99, 82, 1);
+    --emerald: #59cd90ff;
+    --picton-blue: #3fa7d6ff;
+    --bg-isiForm: rgb(63, 167, 214, .5);
+    --xanthous: #fac05eff;
+    --atomic-tangerine: #f79d84ff;
+}
+/* VARIABEL */
+
+/* BACKGROUND */
+body{
+    background: url("../img/perpus-skanida.jpeg");
+    background-size: cover;
+    background-repeat:unset ;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+}
+/* BACKGROUND */
+
+/* TITLE */
+h1{
+    font-family: "Alfa Slab One";
+    letter-spacing: 3px;
+    text-shadow: var(--text-3D);
+    color: #fff;
+    text-align: center;
+    font-weight: normal;
+    font-size: clamp(12px, 2.4vw, 48px);
+}
+/* TITLE */
+
+/* TOMBOL AKSI */
+
+.aksi-page{
+    padding: 1vh 3vw;
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    background: var(--picton-blue);
+}
+.tambah{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: .5vw;
+    font-family: "Alfa Slab One";
+}
+.tambah span{
+    text-shadow: var(--text-3D);
+    color: #fff;
+    text-align: center;
+    font-weight: normal;
+    font-size: clamp(6px, 1.2vw, 24px);
+}
+.fa-square-plus{
+    color: var(--emerald);
+}
+.fa-home{
+    color: var(--bittersweet);
+}
+.fa-hand-point-left{
+    color: var(--picton-blue);
+}
+.aksi-page .fa-solid{
+    font-size: clamp(12.5px, 2.5vw, 50px);
+    filter: brightness(1.2);
+    transition: all .3s ease;
+    text-shadow: var(--text-3D);
+}
+.aksi-page .fa-solid:hover{
+    filter: brightness(.75);
+    transform: scale(.9);
+}
+.aksi-page .fa-solid:active{
+    transform: scale(1.2);
+}
+
+/* TOMBOL AKSI */
+
+/* BUKU */
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3vw;
+    padding: 0 0 0 3vw;
+}
+.card{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    width: 16vw;
+    height: 24vw;
+    background-color: var(--xanthous);
+    border-radius: 10px;
+    font-family: "Nunito Sans";
+}
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: var(--text-3D);
+}
+
+.card-kode_buku{
+    background-color: var(--atomic-tangerine);
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    padding: .25em 0;
+    font-weight: bold;
+    font-size: clamp(4px, .8vw, 16px);
+}
+
+.card-sampul {
+    color: #fff;
+    text-shadow: var(--text-3D);
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(18px, 7.2vw, 144px);;
+    width: 16vw;
+    height: 12vw;
+    overflow: hidden;
+}
+.card-sampul img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-deskripsi{
+    padding: 0.5em;
+}
+.card-deskripsi-rinci{
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(4px, .8vw, 16px);
+}
+.card-deskripsi-rinci .cardDesk{
+    display: grid;
+    grid-template-columns: 4vw .5vw 10vw;
+    /* border: 1px solid black; */
+}
+.cardDesk div{
+    padding: 1vh 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tahun_terbit{
+    font-size: clamp(3px, .6vw, 12px);
+}
+.card-judul_buku{
+    font-weight: bold;
+    font-size: clamp(8px, 1.6vw, 32px);
+    max-width: 16vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card-kelas{
+    font-size: clamp(3.5px, .7vw, 14px);
+    max-width: 8vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.card-aksi{
+    display: flex;
+    justify-content: right;
+    gap: .5em;
+}
+
+.card-aksi a{
+    color: black;
+    opacity: .5;
+    transition: all .3s ease;
+    font-size: clamp(4.5px, .9vw, 18px);
+}
+.card-aksi a:hover{
+    opacity: 1;
+}
+.card-aksi a:active{
+    transform: scale(1.2);
+}
+
+/* BUKU */
+
+/* FORM BUKU */
+h3{
+    font-family: "Alfa Slab One";
+    font-weight: 100;
+    font-size: clamp(9px, 1.8vw, 36px);
+    text-align: center;
+}
+.isiForm{
+    background: var(--bg-isiForm);
+    width: 100vw;
+    height: max-content;
+    padding: 1.5vw 3vw;
+}
+.isiForm td{
+    padding: 1vh 0;
+    font-family: "Nunito Sans";
+    color: #ffffff;
+    text-shadow: var(--text-3D);
+    font-size: clamp(6px, 1.2vw, 24px);
+
+}
+.isiForm input[type="text"]{
+    background: none;
+    border: none;
+    outline: solid 1px #000;
+    padding: .5vw .1vw;
+    width: 100%;
+    border-radius: 5px;
+    color: #000;
+    font-family: "Nunito Sans";
+    font-size: clamp(5px, 1vw, 20px);
+}
+.isiForm input[type="text"]:focus{
+    background: #fff;
+}
+.isiForm input[type="file"]{
+    display: none;
+}
+.fotoSampul{
+    color: #fff;
+    text-shadow: var(--text-3D);
+    border-radius: 5px 5px 0 0;
+    margin-left: 3vw;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(18px, 3.6vw, 72px);;
+    width: 8vw;
+    height: 8vw;
+    overflow: hidden;
+}
+.fotoSampul img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+label{
+    display: inline-block;
+    color: #fff;
+    text-shadow: none;
+    font-weight: bold;
+    text-align: center;
+    background: var(--atomic-tangerine);
+    padding: 1vw 1.5vw;
+    border-radius: 15px;
+    font-size: clamp(6px, 1.2vw, 24px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s ease;
+    box-shadow: var(--text-3D);
+}
+label:hover{
+    filter: brightness(.5);
+}
+label:active{
+    transform: scale(.9) translateY(5px);
+    box-shadow: none;
+}
+input[type="submit"]{
+    color: #fff;
+    text-shadow: none;
+    font-weight: bold;
+    text-align: center;
+    background: var(--emerald);
+    padding: 1vw 1.5vw;
+    border-radius: 15px;
+    border: none;
+    font-size: clamp(6px, 1.2vw, 24px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s ease;
+    box-shadow: var(--text-3D);
+}
+input[type="submit"]:hover{
+    filter: brightness(.5);
+}
+input[type="submit"]:active{
+    transform: scale(.9) translateY(5px);
+    box-shadow: none;
+}
+
+.isiForm input[type="date"]{
+    background: none;
+    border: none;
+    outline: solid 1px #000;
+    padding: .5vw .1vw;
+    width: fit-content;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Nunito Sans";
+    font-size: clamp(5px, 1vw, 20px);
+}
+.isiForm input[type="date"]:focus{
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+}
+
+/* FORM BUKU */
